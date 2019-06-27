@@ -28,6 +28,7 @@ var namespace = os.Getenv("KUBE_NAMESPACE")
 
 // image for the plexmediaserver container containing the transcoder. This
 // should be set to the same as the 'master' pms server
+
 var pmsImage = os.Getenv("PMS_IMAGE")
 var pmsInternalAddress = os.Getenv("PMS_INTERNAL_ADDRESS")
 
@@ -103,7 +104,7 @@ func generatePod(cwd string, env []string, args []string) *corev1.Pod {
 	envVars := toCoreV1EnvVar(env)
 	return &corev1.Pod{
 		ObjectMeta: metav1.ObjectMeta{
-			GenerateName: "pms-elastic-transcoder-",
+			GenerateName: "pms-elastic-transcoder-mod-",
 		},
 		Spec: corev1.PodSpec{
 			NodeSelector: map[string]string{
