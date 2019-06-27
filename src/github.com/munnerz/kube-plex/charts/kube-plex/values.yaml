@@ -68,7 +68,7 @@ persistence:
     # Optionally specify claimName to manually override the PVC to be used for
     # the transcode directory. If claimName is specified, storageClass and size
     # are ignored.
-    ## claimName: "plex-transcode-pvc"
+    claimName: "plex-kube-plex-transcode"
     # Optionally specify a storage class to be used for the transcode directory.
     # If not specified and claimName is not specified, the default storage
     # class will be used.
@@ -81,7 +81,7 @@ persistence:
     # Optionally specify claimName to manually override the PVC to be used for
     # the data directory. If claimName is specified, storageClass and size are
     # ignored.
-    ## claimName: "plex-data-pvc"
+    claimName: "plex-pvc"
     # Optionally specify a storage class to be used for the data directory.
     # If not specified and claimName is not specified, the default storage
     # class will be used.
@@ -94,7 +94,7 @@ persistence:
     # Optionally specify claimName to manually override the PVC to be used for
     # the config directory. If claimName is specified, storageClass and size
     # are ignored.
-    ## claimName: "plex-config-pvc"
+    claimName: "plexconfig-pvc"
     # Optionally specify a storage class to be used for the config directory.
     # If not specified and claimName is not specified, the default storage
     # class will be used.
